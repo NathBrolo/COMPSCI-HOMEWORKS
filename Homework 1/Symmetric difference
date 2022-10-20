@@ -1,0 +1,17 @@
+def symmetric_difference(m, n):
+    result = m.difference(n).union(n.difference(m))
+    
+    return result
+
+if __name__ == '__main__':
+    m = int(input())
+    m = set(map(int, input().split()))
+    n = int(input())
+    n = set(map(int, input().split()))
+    
+    result =symmetric_difference(m, n)
+   
+    result = sorted(list(result))
+    
+    for n in result:
+        print(n)
