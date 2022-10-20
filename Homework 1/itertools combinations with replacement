@@ -1,0 +1,9 @@
+from itertools import combinations_with_replacement
+
+s , n = input().split()
+se= list()
+y = sorted(list(combinations_with_replacement(s,int(n))))
+for x in y:
+    se.append(sorted(x))
+for x in sorted(se):
+    print(''.join(x))
