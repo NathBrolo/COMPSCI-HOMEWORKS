@@ -1,0 +1,15 @@
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+    
+    scores = sorted(list(arr))
+    
+    maximum = scores[-1]
+    runner_up = maximum
+    
+    for i in range(len(scores) -1,-1, -1):
+        if scores[i] < maximum:
+            runner_up = scores[i]
+            break
+        
+    print(runner_up)
