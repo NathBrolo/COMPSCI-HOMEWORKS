@@ -1,0 +1,36 @@
+if __name__ == '__main__':
+    N = int(raw_input())
+    
+    commands = []
+    
+    for i in range(N):
+        commands.append(raw_input())
+        
+    numbers =[]
+    
+    for c in commands:
+        parts = c.split()
+        command = parts[0] 
+        
+        if command == 'insert':
+            index = int(parts[1])
+            value = int(parts[2])
+            
+            numbers.insert(index, value)
+        elif command == 'print':
+            print(numbers)
+        elif command == 'remove':
+            value = int(parts[1])
+            if value in numbers:
+                numbers.remove(value)
+        elif command == 'append':
+            value = int(parts[1])
+            numbers.append(value)
+        elif command == 'sort':
+            numbers.sort()
+        elif command == 'pop':
+          if len(numbers):
+            numbers.pop()
+        else: 
+           numbers.reverse() 
+            
