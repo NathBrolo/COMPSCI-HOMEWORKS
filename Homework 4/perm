@@ -1,0 +1,17 @@
+import numpy as np
+import itertools
+
+n = 7
+order = np.arange(1, n+1, 1)
+count = 0
+
+perm = list(itertools. permutations(order))
+
+print(len(perm))
+
+for i in perm:
+    count += 1
+    for x in range(n): 
+        if x < n - 1: print(str(i[x]), end =" ")
+        else: print(str(i[x]))
+    
